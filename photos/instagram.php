@@ -5,12 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>My Octopress Blog</title>
+  <title>instagram - My Octopress Blog</title>
   <meta name="author" content="fantasy">
 
   
-  <meta name="description" content="
-">
+  <meta name="description" content="Instagram Jun 19th, 2012 <?php $access_token='183904190.1fb234f.dc19aa0f29d945d5865d71345d2d9016'; $count_images=90; $cache_time=60; $image_size=' &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://tjfantasy.github.com/">
+  <link rel="canonical" href="http://tjfantasy.github.com/photos/instagram.php">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -64,19 +63,97 @@
 </nav>
   <div id="main">
     <div id="content" class="content">
-      <div class="blog-index">
+      <div>
+<article role="article">
   
-  
-  
-    <article>
-      
   <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/06/19/zhong-wen-ce-shi/">中文测试</a></h1>
-    
-    
+    <h1 class="entry-title">Instagram</h1>
+    <p class="meta">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-19T15:05:00+08:00" pubdate data-updated="true">Jun 19<span>th</span>, 2012</time></p>
+  </header>
+  
+  <?php
+
+  $access_token='183904190.1fb234f.dc19aa0f29d945d5865d71345d2d9016';
+  $count_images=90;
+  $cache_time=60;
+  $image_size='thumbnail';
+  
+  /**
+  Output each image with HTML markup
+ */
+  function echoimage($val, $imagesize) {
+      $image = $val["images"][$imagesize]["url"];
+      $link = $val["link"];
+      $tag=md5($link);
+      return "<a href=\"$link\" target=\"_blank\"><img src=\"$image\"/></a>";
+      }
+      
+  /**
+  Getting the Data from the API
+ */
+  function getDataFromApi($token, $number){
+      // Instagram API bearbeiten
+      $url="https://api.instagram.com/v1/users/self/media/recent/?access_token=$token&count=$number";
+      $contents = file_get_contents($url);
+      return $contents;
+  }
+  
+  /**
+  Gets the Data from either the Cache or the API
+ */
+  function getData($token, $number, $cache_time){
+
+      $cache_folder = "your cache path";
+  
+      if(!is_dir($cache_folder)){
+        if(mkdir($cache_folder, 0777) == false){
+          return getDataFromApi($token, $number);
+        }
+      }
+  
+      $cachefile = $cache_folder."user.cache";
+  
+      if (file_exists($cachefile) && time()-filemtime($cachefile)<$cache_time) {
+        try{
+          $contents = file_get_contents($cachefile);
+        }catch(Exception $e){
+          $contents = getDataFromApi($token, $number);
+          file_put_contents($cachefile, $contents);
+        }
+  
+      } else {
+        $contents = getDataFromApi($token, $number);
+        file_put_contents($cachefile, $contents);
+      }
+  
+      return $contents;
+  }
+  
+  $json = json_decode(getData($access_token, $count_images, $cache_time), true);
+
+  echo '<div class="photosdiv">';
+  foreach ($json["data"] as $value)
+      echo echoimage($value, $image_size);
+  echo '</div>';
+  
+?>
+  
+    <footer>
       <p class="meta">
         
+        
 
 
 
@@ -88,27 +165,25 @@
   
 
 
-<time datetime="2012-06-19T17:07:00+08:00" pubdate data-updated="true">Jun 19<span>th</span>, 2012</time>
+<time datetime="2012-06-19T15:05:00+08:00" pubdate data-updated="true">Jun 19<span>th</span>, 2012</time>
         
       </p>
-    
-  </header>
-
-
-  <div class="entry-content">
+      
+        <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://tjfantasy.github.com/photos/instagram.php" data-via="" data-counturl="http://tjfantasy.github.com/photos/instagram.php" >Tweet</a>
+  
+  
+  
 </div>
-  
-  
 
-
-    </article>
+      
+    </footer>
   
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
+</article>
+
 </div>
+
 <aside class="sidebar">
   
     <section>
@@ -136,6 +211,7 @@
 
   
 </aside>
+
 
     </div>
   </div>

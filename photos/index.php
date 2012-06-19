@@ -5,12 +5,14 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>My Octopress Blog</title>
+  <title>photos - My Octopress Blog</title>
   <meta name="author" content="fantasy">
 
   
-  <meta name="description" content="
-">
+  <meta name="description" content=" Photos Jun 19th, 2012 <?php
+include("./instagram.php");
+?> Jun 19th, 2012 Tweet Recent Posts 中文测试 Categories Octopress (1)
+Ruby&Rails (1) ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +21,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://tjfantasy.github.com/">
+  <link rel="canonical" href="http://tjfantasy.github.com/photos/index.php">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -64,19 +66,34 @@
 </nav>
   <div id="main">
     <div id="content" class="content">
-      <div class="blog-index">
+      <div>
+<article role="article">
   
-  
-  
-    <article>
-      
   <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/06/19/zhong-wen-ce-shi/">中文测试</a></h1>
-    
-    
+    <h1 class="entry-title">Photos</h1>
+    <p class="meta">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-19T15:05:00+08:00" pubdate data-updated="true">Jun 19<span>th</span>, 2012</time></p>
+  </header>
+  
+  <?php
+include("./instagram.php");
+?>
+  
+    <footer>
       <p class="meta">
         
+        
 
 
 
@@ -88,27 +105,25 @@
   
 
 
-<time datetime="2012-06-19T17:07:00+08:00" pubdate data-updated="true">Jun 19<span>th</span>, 2012</time>
+<time datetime="2012-06-19T15:05:00+08:00" pubdate data-updated="true">Jun 19<span>th</span>, 2012</time>
         
       </p>
-    
-  </header>
-
-
-  <div class="entry-content">
+      
+        <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://tjfantasy.github.com/photos/index.php" data-via="" data-counturl="http://tjfantasy.github.com/photos/index.php" >Tweet</a>
+  
+  
+  
 </div>
-  
-  
 
-
-    </article>
+      
+    </footer>
   
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
+</article>
+
 </div>
+
 <aside class="sidebar">
   
     <section>
@@ -136,6 +151,7 @@
 
   
 </aside>
+
 
     </div>
   </div>
