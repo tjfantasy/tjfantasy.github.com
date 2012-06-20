@@ -9,10 +9,9 @@
   <meta name="author" content="fantasy">
 
   
-  <meta name="description" content=" Photos Jun 19th, 2012 <?php
+  <meta name="description" content="Photos Jun 19th, 2012 <?php
 include("./instagram.php");
-?> Jun 19th, 2012 Tweet Recent Posts 中文测试 Categories Octopress (1)
-Ruby&Rails (1) ">
+?> Jun 19th, 2012 Tweet Comments Please enable JavaScript to view the comments powered by &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -122,6 +121,12 @@ include("./instagram.php");
   
 </article>
 
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
 </div>
 
 <aside class="sidebar">
@@ -162,6 +167,22 @@ include("./instagram.php");
 
 </footer>
   
+
+<script type="text/javascript">
+      var disqus_shortname = 'tjfantasy';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://tjfantasy.github.com/photos/index.php';
+        var disqus_url = 'http://tjfantasy.github.com/photos/index.php';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
 
 
 
