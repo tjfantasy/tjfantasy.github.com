@@ -4,7 +4,7 @@
   <title><![CDATA[Fantasy Blog]]></title>
   <link href="http://tjfantasy.github.com/atom.xml" rel="self"/>
   <link href="http://tjfantasy.github.com/"/>
-  <updated>2012-06-20T22:42:33+08:00</updated>
+  <updated>2012-06-21T00:53:52+08:00</updated>
   <id>http://tjfantasy.github.com/</id>
   <author>
     <name><![CDATA[fantasy]]></name>
@@ -14,10 +14,19 @@
 
   
   <entry>
-    <title type="html"><![CDATA[技术沙龙六月份“仲夏端阳”]]></title>
-    <link href="http://tjfantasy.github.com/blog/2012/06/19/zhong-wen-ce-shi/"/>
-    <updated>2012-06-19T17:07:00+08:00</updated>
-    <id>http://tjfantasy.github.com/blog/2012/06/19/zhong-wen-ce-shi</id>
+    <title type="html"><![CDATA[技术沙龙6月－“仲夏端阳”]]></title>
+    <link href="http://tjfantasy.github.com/blog/2012/06/21/salon-june/"/>
+    <updated>2012-06-21T00:49:00+08:00</updated>
+    <id>http://tjfantasy.github.com/blog/2012/06/21/salon-june</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[技术沙龙5月－“日志前世今生“]]></title>
+    <link href="http://tjfantasy.github.com/blog/2012/06/20/salon-may/"/>
+    <updated>2012-06-20T00:50:00+08:00</updated>
+    <id>http://tjfantasy.github.com/blog/2012/06/20/salon-may</id>
     <content type="html"><![CDATA[
 ]]></content>
   </entry>

@@ -195,7 +195,7 @@
     <section>
  <h1>文章分类</h1>
  <ul id="categories">
- <li class='category'><a href=' /blog/categories/技术沙龙/'>技术沙龙 (1)</a></li>
+ <li class='category'><a href=' /blog/categories/技术沙龙/'>技术沙龙 (2)</a></li>
 
  </ul>
 </section><section>
@@ -203,7 +203,11 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2012/06/19/zhong-wen-ce-shi/">技术沙龙六月份“仲夏端阳”</a>
+        <a href="/blog/2012/06/21/salon-june/">技术沙龙6月－“仲夏端阳”</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/06/20/salon-may/">技术沙龙5月－“日志前世今生“</a>
       </li>
     
   </ul>
