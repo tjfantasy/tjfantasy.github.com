@@ -37,7 +37,7 @@
   <header role="banner"><hgroup>
   <h1><a href="/">Fantasy Blog</a></h1>
   
-    <h2>A blogging framework for hackers.</h2>
+    <h2>programmer | blogger | web guy | java fan</h2>
   
 </hgroup>
 
