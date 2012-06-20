@@ -1,0 +1,202 @@
+
+#content {
+background-color:#312D27 !important;
+color: #FFFFFF;
+}
+body > header {
+border-bottom: 1px solid #222;
+}
+article img, article video, article .flash-video {
+-moz-box-sizing: border-box;
+border: 0.6em solid #42403C;
+border-radius: 0.3em 0.3em 0.3em 0.3em;
+box-shadow: 0 0 0 rgba(0, 0, 0, 0.0);
+}
+body > div > div {
+background: #F8F8F8;
+border-right: 1px solid #000;
+}
+
+
+body > div {
+border-bottom: 1px solid #000;
+}
+
+.photosdiv{
+width: 100%;
+}
+.accountdiv{
+background-color: #4b4030;
+border-radius: 0.5em 0.5em 0.5em 0.5em;
+color: #f4dfca;
+float: right;
+margin-top: 8px;
+width: 260px;
+padding: 20px;
+box-shadow: 0 3px 4px rgba(0, 0, 0, 0.55);
+border: 1px solid rgba(255,255,255,0.1);
+}
+.accountdiv .des{
+margin-top: 10px;
+}
+.accountdiv a{
+}
+.accountdiv img{
+float: left;
+width: 110px;
+border: 0;
+box-shadow: 0 0 0;
+margin-right: 10px;
+}
+.accountdiv .avatar{
+border-radius: 0.8em;
+}
+.accountdiv .username{
+font-size: 18pt;
+}
+.accountdiv .count1,.accountdiv .count2,.accountdiv .count3{
+display: inline-block;
+width: 29%;
+text-align: center;
+background-color: #ddd;
+margin: 8px 7px 0 0;
+height: 40px;
+border-radius: 0.3em;
+font-size: 26px;
+font-weight: bold;
+padding: 3px 0 5px 0;
+line-height: 22px;
+}
+.accountdiv .count1 span,.accountdiv .count2 span,.accountdiv .count3 span{
+display: block;
+font-size: 10px;
+font-weight: normal;
+}
+.accountdiv .count1 a,.accountdiv .count2 a,.accountdiv .count3 a{
+text-decoration: none;
+color: #594b36 !important;
+}
+.accountdiv .follows, .accountdiv .followedby{
+display: block;
+clear: both;
+margin-top: 25px;
+}
+.accountdiv .follows img, .accountdiv .followedby img{
+min-width: 37px;
+min-height: 37px;
+max-width: 37px;
+max-height: 37px;
+margin: 3px 6px 3px 0;
+border-radius: 0.4m;
+}
+.accountdiv br{
+clear: both;
+}
+#countdiv{
+clear: both;
+}
+.like{ display: inline-block; padding-left: 20px; background: url(http://statigr.am/images/like_off.png) no-repeat; }
+.clear{ clear: both; }
+.photosdiv{margin-bottom:20px;}
+.picdiv{
+float: left;
+max-width:110px;
+max-height:110px;
+min-height: 110px;
+min-width: 110px;
+margin:8px 6px 5px;
+background-color: #4B4030;
+padding: 7px;
+border-radius: 0.3em 0.3em 0.3em 0.3em;
+box-shadow: 0 3px 4px rgba(0, 0, 0, 0.55);
+border: 1px solid rgba(255,255,255,0.1);
+}
+.picdiv img {
+border: 0 !important;
+width: 110px;
+height: 110px;
+border-radius: 0;
+}
+.picdiv .ins{
+display:block;
+position:relative;
+}
+.picdiv .ins::before{
+content:'';
+position:absolute;
+width:100%;
+height:95%;
+-moz-box-shadow:inset 0px 0px 3px 2px rgba(0,0,0,0.8);
+-webkit-box-shadow:inset 0px 0px 3px 2px rgba(0,0,0,0.8);
+box-shadow:inset 0px 0px 3px 2px rgba(0,0,0,0.8);
+}
+.picdiv .cap{
+background-color: rgba(255, 255, 255, 0.7);
+bottom: 25px;
+height: 20px;
+color: #000000;
+font-size: 10px;
+line-height: 16px;
+position: relative;
+text-align: left;
+padding-left: 5px;
+}
+.picdiv .cap .cmt{
+padding-left: 14px;
+background: url(img/comment.png) left 3px no-repeat;
+margin-right: 5px;
+}
+.picdiv .cap .lik{
+padding-left: 14px;
+background: url(img/heart.png) left 3px no-repeat;
+margin-right: 5px;
+}
+.picdiv .hcap{
+background-color: rgba(255, 255, 255, 0.0);
+color: rgba(1,1,1,0);
+}
+.picdiv .hcap .cmt, .picdiv .hcap .lik{
+background-image: none !important;
+}
+.first.picdiv{
+max-width:248px;
+max-height:248px;
+min-height: 248px;
+min-width: 248px;
+}
+.first.picdiv img {
+border: 0 !important;
+width: 248px;
+height: 248px;
+border-radius: 0;
+}
+.first.picdiv .ins::before{
+height:98%;
+}
+.morebutton{
+text-align: center;
+background: none repeat scroll 0 0 #CDC6B5;
+border-radius: 0.3em;
+padding: 4px 7px;
+width: 100px;
+box-shadow: 0 3px 4px rgba(0, 0, 0, 0.55);
+color: #322e28 !important;
+margin-left: 5px;
+margin-top: 30px;
+cursor: pointer;
+clear: both;
+}
+.morebutton a{
+color: #322e28 !important;
+}
+@media screen and (max-device-width: 480px){
+/*--- iPhone only CSS here ---*/
+.accountdiv{
+display: none;
+}
+.picdiv{
+}
+.photosdiv{
+width: 100%;
+}
+}

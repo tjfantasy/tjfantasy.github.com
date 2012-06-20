@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
+  <title><![CDATA[Fantasy Blog]]></title>
   <link href="http://tjfantasy.github.com/atom.xml" rel="self"/>
   <link href="http://tjfantasy.github.com/"/>
-  <updated>2012-06-20T17:03:57+08:00</updated>
+  <updated>2012-06-20T22:38:54+08:00</updated>
   <id>http://tjfantasy.github.com/</id>
   <author>
     <name><![CDATA[fantasy]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[中文测试]]></title>
+    <title type="html"><![CDATA[技术沙龙六月份“仲夏端阳”]]></title>
     <link href="http://tjfantasy.github.com/blog/2012/06/19/zhong-wen-ce-shi/"/>
     <updated>2012-06-19T17:07:00+08:00</updated>
     <id>http://tjfantasy.github.com/blog/2012/06/19/zhong-wen-ce-shi</id>
