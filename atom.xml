@@ -4,7 +4,7 @@
   <title><![CDATA[Fantasy Blog]]></title>
   <link href="http://tjfantasy.github.com/atom.xml" rel="self"/>
   <link href="http://tjfantasy.github.com/"/>
-  <updated>2012-06-21T17:18:00+08:00</updated>
+  <updated>2012-06-21T17:30:27+08:00</updated>
   <id>http://tjfantasy.github.com/</id>
   <author>
     <name><![CDATA[fantasy]]></name>
@@ -18,9 +18,20 @@
     <link href="http://tjfantasy.github.com/blog/2012/06/21/salon-june/"/>
     <updated>2012-06-21T00:49:00+08:00</updated>
     <id>http://tjfantasy.github.com/blog/2012/06/21/salon-june</id>
-    <content type="html"><![CDATA[<blockquote><p>端午临中夏，时清日复长。盐梅已佐鼎，曲糵且传觞。事古人留迹，年深缕积长。当轩知槿茂，向水觉芦香。亿兆同归寿，群公共保昌。忠贞如不替，贻厥后昆芳。</p></blockquote>
+    <content type="html"><![CDATA[<blockquote><p>端午临中夏，时清日复长。</p></blockquote>
 
-<p style="text-align:right">源自  李隆基的《端午》</p>
+<p>盐梅已佐鼎，曲糵且传觞。</p>
+
+<p>事古人留迹，年深缕积长。</p>
+
+<p>当轩知槿茂，向水觉芦香。</p>
+
+<p>亿兆同归寿，群公共保昌。</p>
+
+<p>忠贞如不替，贻厥后昆芳。</p>
+
+<p style="text-align:right">源自  李隆基的《端午》
+</p>
 
 
 <h2>活动时间</h2>
@@ -41,7 +52,13 @@
 
 <h2>本次活动已经提交的话题</h2>
 
-<p> “众”人的事业需要每个人的参与，我们为大家提供开放的自由话题讨论机会，有话题分享或发起讨论意愿的朋友可以在活动开始之前将PPT或者话题、讨论内容提交通过邮件发给（zhanghao@mail.taiji.com.cn）</p>
+<ul>
+<li>JS重构  主讲人：边迪</li>
+<li>分享社区活动感受  主讲人：张昊</li>
+<li>中石油架构分享  主讲人：刘贯良</li>
+<li>ESB解决方案  主讲人：张昊</li>
+</ul>
+
 ]]></content>
   </entry>
   
