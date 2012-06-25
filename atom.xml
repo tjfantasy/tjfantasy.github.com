@@ -4,7 +4,7 @@
   <title><![CDATA[Fantasy Blog]]></title>
   <link href="http://tjfantasy.github.com/atom.xml" rel="self"/>
   <link href="http://tjfantasy.github.com/"/>
-  <updated>2012-06-21T17:59:19+08:00</updated>
+  <updated>2012-06-25T10:02:56+08:00</updated>
   <id>http://tjfantasy.github.com/</id>
   <author>
     <name><![CDATA[fantasy]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[ralasafe重构和改造之路]]></title>
+    <link href="http://tjfantasy.github.com/blog/2012/06/25/ralasa-1/"/>
+    <updated>2012-06-25T10:01:00+08:00</updated>
+    <id>http://tjfantasy.github.com/blog/2012/06/25/ralasa-1</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[技术沙龙6月－“仲夏端阳”(已结束)]]></title>
