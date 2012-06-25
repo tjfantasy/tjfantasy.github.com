@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ralasafe | Fantasy Blog]]></title>
   <link href="http://tjfantasy.github.com/blog/categories/ralasafe/atom.xml" rel="self"/>
   <link href="http://tjfantasy.github.com/"/>
-  <updated>2012-06-25T11:15:55+08:00</updated>
+  <updated>2012-06-25T11:30:18+08:00</updated>
   <id>http://tjfantasy.github.com/</id>
   <author>
     <name><![CDATA[fantasy]]></name>
@@ -40,6 +40,12 @@ Ralasafe掌管了项目中的数据权限部分，由于它是基于JDBC实现�
 
 <p><span style="display:block;text-indent:2em;">
 以上这些问题都是我们在项目中遇到的，我认为Ralasafe其实可以做的更好，可以与我们的项目更好的无缝集成，更好让开发人员配置所需的权限。据我了解到的信息，Ralasafe有可能1.2版本会成为它的最后的版本，我能够理解在中国全职做开源事业的艰难和无奈。我打算带领一些热爱技术和开源的人，开启Ralsafe的重构和改造的道路，不仅为了自己在开发项目时带来便利，而且提供一种更好和得到大家认可的数据解决方案，让更多人知道，更多人使用。
+</span> <br/>
+<span style="display:block;text-indent:2em;">
+目前初步设想，把Ralasafe从项目中提出来，原本Ralasafe就是一个中间件，不能跟框架似的，跟项目耦合太高，通过Rest服务,在项目中调用服务获得需要的权限信息；目前Ralasafe只能管理一个系统，但是它最初的理念是建成一个权限管理平台，同时管理多个系统，我希望能在这次改造中把该功能实现。
+</span><br/>
+<span style="display:block;text-indent:2em;">
+无论是出于个人对Ralasafe的感情，还是出于其它的目的，我希望Ralasafe能继续延续它的辉煌。
 </span></p>
 ]]></content>
   </entry>
