@@ -4,7 +4,7 @@
   <title><![CDATA[Fantasy Blog]]></title>
   <link href="http://tjfantasy.github.com/atom.xml" rel="self"/>
   <link href="http://tjfantasy.github.com/"/>
-  <updated>2012-06-25T10:02:56+08:00</updated>
+  <updated>2012-06-25T11:15:55+08:00</updated>
   <id>http://tjfantasy.github.com/</id>
   <author>
     <name><![CDATA[fantasy]]></name>
@@ -18,7 +18,29 @@
     <link href="http://tjfantasy.github.com/blog/2012/06/25/ralasa-1/"/>
     <updated>2012-06-25T10:01:00+08:00</updated>
     <id>http://tjfantasy.github.com/blog/2012/06/25/ralasa-1</id>
-    <content type="html"><![CDATA[
+    <content type="html"><![CDATA[<p><span style="display:block;text-indent:2em;">
+开始了解Ralasafe是一个很偶然的机会，由于数据权限的解决方案对于我们团队一直是个空白，因为项目需求的缘故，不得不对于数据权限这块的空白给填充上，所以开始了解各种各样的解决方案，有的是基于AOP实现的，有的是基于SpringSecurity的ACL实现的，有的是基于商业产品实现的，直到发现了Ralasafe，一个开源访问控制中间件， 直觉告诉我这个就是我的解决方案了。
+</span><br/>
+<span style="display:block;text-indent:2em;">
+从最初一个普通不能再普通的初级用户,到最后参与到修改BUG，发布Oracle版本的过程中，结交了很多人，比如：Ralasafe作者汪金宝，其中贡献者宋子龙。也在这个过程中对于国产开源软件有了一个翻天覆地的认识，一直把国产开源软件和质量差划等号，认为国产的开源很难真正用到实际项目中。而今天已经把开源用到了我们的实际项目中，并且通过我们的成功案例，其他的项目组，也打算在下个项目中使用。在我们的生活中，唯一不变的就是变化，也许Ralasafe是一个令我改变的诱因。
+</span><br/>
+<span style="display:block;text-indent:2em;">
+Ralasafe掌管了项目中的数据权限部分，由于它是基于JDBC实现的，所以还帮助我们在Hibernate之外，另外一种查询的方式，因为对于大数据量，高并发系统中，Hibernate生成的SQL效率特别低，所以不得不借助于原生SQL实现，又一次发挥Ralasafe功力的时刻。我们不可否认Ralasafe为我们项目开发和今天需求变更带来了极大的帮助，但是它也有一些不尽人情的地方。
+</span></p>
+
+<blockquote><ol>
+<li>对于项目侵染性太大，必须要在项目中引入大量的Ralasafe文件。</li>
+<li>当配置的查询和权限信息很多时，在配置过程中会很繁琐。</li>
+<li>配置信息一部分存放在数据库，一部分存放在文件里，维护起来麻烦，导致团队开发时，会带来很多麻烦的问题。</li>
+<li>由于大量使用反射，因此查询效率不高。</li>
+<li>由于在查询过程中，有可能会涉及到缓存，对于缓存目前没有解决方案。
+。。。。。。。。。。。。</li>
+</ol>
+</blockquote>
+
+<p><span style="display:block;text-indent:2em;">
+以上这些问题都是我们在项目中遇到的，我认为Ralasafe其实可以做的更好，可以与我们的项目更好的无缝集成，更好让开发人员配置所需的权限。据我了解到的信息，Ralasafe有可能1.2版本会成为它的最后的版本，我能够理解在中国全职做开源事业的艰难和无奈。我打算带领一些热爱技术和开源的人，开启Ralsafe的重构和改造的道路，不仅为了自己在开发项目时带来便利，而且提供一种更好和得到大家认可的数据解决方案，让更多人知道，更多人使用。
+</span></p>
 ]]></content>
   </entry>
   
