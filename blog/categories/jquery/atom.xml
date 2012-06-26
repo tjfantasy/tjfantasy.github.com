@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: JQuery | Fantasy Blog]]></title>
+  <link href="http://tjfantasy.github.com/blog/categories/jquery/atom.xml" rel="self"/>
+  <link href="http://tjfantasy.github.com/"/>
+  <updated>2012-06-26T18:34:19+08:00</updated>
+  <id>http://tjfantasy.github.com/</id>
+  <author>
+    <name><![CDATA[fantasy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[ajaxForm文件上传的BUG]]></title>
+    <link href="http://tjfantasy.github.com/blog/2012/06/26/jquery-ajaxform-1/"/>
+    <updated>2012-06-26T18:25:00+08:00</updated>
+    <id>http://tjfantasy.github.com/blog/2012/06/26/jquery-ajaxform-1</id>
+    <content type="html"><![CDATA[<p><span style="display:block;text-indent:2em;">
+今天在重构代码时，发现一个BUG，使用ajaxForm提交表单上传文件后服务器端的json数据无法解析到，在FireFox下弹出来个窗口提示我返回json数据要不要打开,别的浏览器没有这情况.<br/>
+</span><br/>
+<span style="display:block;text-indent:2em;">
+原来使用ajaxForm,必须以html格式返回json数据. 也就是 response.setContentType("text/html; charset=utf-8"); 这样返回的数据才能被设置到回调函数里面. 而且貌似格式必须是 "key":"value" 也就是双引号,单引号还不行。
+</span><br/>
+<span style="display:block;text-indent:2em;">
+所以直接在SuccessFailView直接扩展增加
+</span>
+<span style="display:block;text-indent:2em;"></p>
+
+<pre><code>private String returnType = "json"; //返回类型
+</code></pre>
+
+<p></span>
+<span style="display:block;text-indent:2em;">
+在返回前台时按照不同的类型返回
+</span></p>
+
+<pre><code>JSONObject jsonObject = new JSONObject();
+jsonObject.put("result", result);
+if(id !=null){
+    jsonObject.put("id", id);
+}
+if(message != null) {
+    jsonObject.put("message", message);
+}
+response.setContentType("text/"+returnType+";charset=UTF-8");
+response.getWriter().write(jsonObject.toString());
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>

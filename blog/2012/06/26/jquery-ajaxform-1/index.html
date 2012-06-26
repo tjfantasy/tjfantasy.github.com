@@ -5,12 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>技术沙龙5月－“日志前世今生“(已结束) - Fantasy Blog</title>
+  <title>ajaxForm文件上传的BUG - Fantasy Blog</title>
   <meta name="author" content="fantasy">
 
   
-  <meta name="description" content="活动时间 2012.05.18 周五 14:00 ~ 17：30 活动地点 407办公室 活动费用 我们为参与者免费提供各种饮料、甜品、水果等 本次活动已经提交的话题 你还在用System.out.println()调试程序吗？说明你out了！
-你有没有想过我们为什么要在系统里纪录日志， &hellip;">
+  <meta name="description" content="今天在重构代码时，发现一个BUG，使用ajaxForm提交表单上传文件后服务器端的json数据无法解析到，在FireFox下弹出来个窗口提示我返回json数据要不要打开,别的浏览器没有这情况. 原来使用ajaxForm,必须以html格式返回json数据. 也就是 response. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://tjfantasy.github.com/blog/2012/06/20/salon-may/">
+  <link rel="canonical" href="http://tjfantasy.github.com/blog/2012/06/26/jquery-ajaxform-1/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -82,7 +81,7 @@
   
   <header>
     
-      <h1 class="entry-title">技术沙龙5月－“日志前世今生“(已结束)</h1>
+      <h1 class="entry-title">ajaxForm文件上传的BUG</h1>
     
     
       <p class="meta">
@@ -98,7 +97,7 @@
   
 
 
-<time datetime="2012-06-20T00:50:00+08:00" pubdate data-updated="true">Jun 20<span>th</span>, 2012</time>
+<time datetime="2012-06-26T18:25:00+08:00" pubdate data-updated="true">Jun 26<span>th</span>, 2012</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -107,28 +106,36 @@
   </header>
 
 
-<div class="entry-content"><h2>活动时间</h2>
+<div class="entry-content"><p><span style="display:block;text-indent:2em;">
+今天在重构代码时，发现一个BUG，使用ajaxForm提交表单上传文件后服务器端的json数据无法解析到，在FireFox下弹出来个窗口提示我返回json数据要不要打开,别的浏览器没有这情况.<br/>
+</span><br/>
+<span style="display:block;text-indent:2em;">
+原来使用ajaxForm,必须以html格式返回json数据. 也就是 response.setContentType(&#8220;text/html; charset=utf-8&#8221;); 这样返回的数据才能被设置到回调函数里面. 而且貌似格式必须是 &#8220;key&#8221;:&#8221;value&#8221; 也就是双引号,单引号还不行。
+</span><br/>
+<span style="display:block;text-indent:2em;">
+所以直接在SuccessFailView直接扩展增加
+</span>
+<span style="display:block;text-indent:2em;"></p>
 
-<p>2012.05.18 周五 14:00 ~ 17：30</p>
+<pre><code>private String returnType = "json"; //返回类型
+</code></pre>
 
-<h2>活动地点</h2>
+<p></span>
+<span style="display:block;text-indent:2em;">
+在返回前台时按照不同的类型返回
+</span></p>
 
-<p>407办公室</p>
-
-<h2>活动费用</h2>
-
-<p>我们为参与者免费提供各种饮料、甜品、水果等</p>
-
-<h2>本次活动已经提交的话题</h2>
-
-<ol>
-<li>你还在用System.out.println()调试程序吗？说明你<span style="font-weight: bold;color:red;font-size:18px">out</span>了！</li>
-<li>你有没有想过我们为什么要在系统里纪录日志，它给我们带来了什么？</li>
-<li>你有没有听说过slf4j,Logback,Log4J?知道它们的前世今生吗？</li>
-<li>你有没有在使用Log4J中，有没有为代码繁琐和效率的问题而发愁呢？</li>
-<li>你有没有想更深入了解它们该怎样使用，他们的工作原理到底是怎么样的呢？</li>
-</ol>
-
+<pre><code>JSONObject jsonObject = new JSONObject();
+jsonObject.put("result", result);
+if(id !=null){
+    jsonObject.put("id", id);
+}
+if(message != null) {
+    jsonObject.put("message", message);
+}
+response.setContentType("text/"+returnType+";charset=UTF-8");
+response.getWriter().write(jsonObject.toString());
+</code></pre>
 </div>
 
 
@@ -151,12 +158,12 @@
   
 
 
-<time datetime="2012-06-20T00:50:00+08:00" pubdate data-updated="true">Jun 20<span>th</span>, 2012</time>
+<time datetime="2012-06-26T18:25:00+08:00" pubdate data-updated="true">Jun 26<span>th</span>, 2012</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/技术沙龙/'>技术沙龙</a>
+    <a class='category' href='/blog/categories/jquery/'>JQuery</a>
   
 </span>
 
@@ -165,7 +172,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://tjfantasy.github.com/blog/2012/06/20/salon-may/" data-via="" data-counturl="http://tjfantasy.github.com/blog/2012/06/20/salon-may/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://tjfantasy.github.com/blog/2012/06/26/jquery-ajaxform-1/" data-via="" data-counturl="http://tjfantasy.github.com/blog/2012/06/26/jquery-ajaxform-1/" >Tweet</a>
   
   
   
@@ -174,8 +181,8 @@
     
     <p class="meta">
       
+        <a class="basic-alignment left" href="/blog/2012/06/25/ralasa-1/" title="Previous Post: ralasafe重构和改造之路">&laquo; ralasafe重构和改造之路</a>
       
-        <a class="basic-alignment right" href="/blog/2012/06/21/salon-june/" title="Next Post: 技术沙龙6月－“仲夏端阳”(已结束)">技术沙龙6月－“仲夏端阳”(已结束) &raquo;</a>
       
     </p>
   </footer>
@@ -246,8 +253,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://tjfantasy.github.com/blog/2012/06/20/salon-may/';
-        var disqus_url = 'http://tjfantasy.github.com/blog/2012/06/20/salon-may/';
+        var disqus_identifier = 'http://tjfantasy.github.com/blog/2012/06/26/jquery-ajaxform-1/';
+        var disqus_url = 'http://tjfantasy.github.com/blog/2012/06/26/jquery-ajaxform-1/';
         var disqus_script = 'embed.js';
       
     (function () {

@@ -9,7 +9,7 @@
   <meta name="author" content="fantasy">
 
   
-  <meta name="description" content="开始了解Ralasafe是一个很偶然的机会，由于数据权限的解决方案对于我们团队一直是个空白，因为项目需求的缘故，不得不对于数据权限这块的空白给填充上，所以开始了解各种各样的解决方案，有的是基于AOP实现的，有的是基于SpringSecurity的ACL实现的，有的是基于商业产品实现的， &hellip;">
+  <meta name="description" content="今天在重构代码时，发现一个BUG，使用ajaxForm提交表单上传文件后服务器端的json数据无法解析到，在FireFox下弹出来个窗口提示我返回json数据要不要打开,别的浏览器没有这情况. 原来使用ajaxForm,必须以html格式返回json数据. 也就是 response. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -78,6 +78,73 @@
     <div id="content" class="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/06/26/jquery-ajaxform-1/">ajaxForm文件上传的BUG</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-26T18:25:00+08:00" pubdate data-updated="true">Jun 26<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/06/26/jquery-ajaxform-1/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><span style="display:block;text-indent:2em;">
+今天在重构代码时，发现一个BUG，使用ajaxForm提交表单上传文件后服务器端的json数据无法解析到，在FireFox下弹出来个窗口提示我返回json数据要不要打开,别的浏览器没有这情况.<br/>
+</span><br/>
+<span style="display:block;text-indent:2em;">
+原来使用ajaxForm,必须以html格式返回json数据. 也就是 response.setContentType(&#8220;text/html; charset=utf-8&#8221;); 这样返回的数据才能被设置到回调函数里面. 而且貌似格式必须是 &#8220;key&#8221;:&#8221;value&#8221; 也就是双引号,单引号还不行。
+</span><br/>
+<span style="display:block;text-indent:2em;">
+所以直接在SuccessFailView直接扩展增加
+</span>
+<span style="display:block;text-indent:2em;"></p>
+
+<pre><code>private String returnType = "json"; //返回类型
+</code></pre>
+
+<p></span>
+<span style="display:block;text-indent:2em;">
+在返回前台时按照不同的类型返回
+</span></p>
+
+<pre><code>JSONObject jsonObject = new JSONObject();
+jsonObject.put("result", result);
+if(id !=null){
+    jsonObject.put("id", id);
+}
+if(message != null) {
+    jsonObject.put("message", message);
+}
+response.setContentType("text/"+returnType+";charset=UTF-8");
+response.getWriter().write(jsonObject.toString());
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -290,13 +357,18 @@ Ralasafe掌管了项目中的数据权限部分，由于它是基于JDBC实现�
     <section>
  <h1>文章分类</h1>
  <ul id="categories">
- <li class='category'><a href=' /blog/categories/ralasafe/'>ralasafe (1)</a></li>
+ <li class='category'><a href=' /blog/categories/jquery/'>JQuery (1)</a></li>
+<li class='category'><a href=' /blog/categories/ralasafe/'>ralasafe (1)</a></li>
 <li class='category'><a href=' /blog/categories/技术沙龙/'>技术沙龙 (2)</a></li>
 
  </ul>
 </section><section>
   <h1>最近的文章</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/06/26/jquery-ajaxform-1/">ajaxForm文件上传的BUG</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2012/06/25/ralasa-1/">ralasafe重构和改造之路</a>
