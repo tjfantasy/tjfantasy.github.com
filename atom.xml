@@ -4,7 +4,7 @@
   <title><![CDATA[Fantasy Blog]]></title>
   <link href="http://tjfantasy.github.com/atom.xml" rel="self"/>
   <link href="http://tjfantasy.github.com/"/>
-  <updated>2012-07-24T09:18:10+08:00</updated>
+  <updated>2012-07-24T09:26:53+08:00</updated>
   <id>http://tjfantasy.github.com/</id>
   <author>
     <name><![CDATA[fantasy]]></name>
@@ -18,7 +18,44 @@
     <link href="http://tjfantasy.github.com/blog/2012/07/24/salon-july/"/>
     <updated>2012-07-24T09:16:00+08:00</updated>
     <id>http://tjfantasy.github.com/blog/2012/07/24/salon-july</id>
-    <content type="html"><![CDATA[
+    <content type="html"><![CDATA[<blockquote><p>山光忽西落，池月渐东上。</p>
+
+<p>散发乘夕凉，开轩卧闲敞。</p>
+
+<p>荷风送香气，竹露滴清响。</p>
+
+<p>欲取鸣琴弹，恨无知音赏。</p>
+
+<p>感此怀故人，中宵劳梦想。</p></blockquote>
+
+<p style="text-align:right">源自  孟浩然的《夏日南亭怀辛大》
+</p>
+
+
+<h2>活动时间</h2>
+
+<p>2012.07.27 周五 14:00 ~ 17：30</p>
+
+<h2>活动地点</h2>
+
+<p>方兴大厦9层会议室</p>
+
+<h2>活动费用</h2>
+
+<p>我们为参与者免费提供各种饮料、甜品、水果等</p>
+
+<h2>招募话题</h2>
+
+<p> “众”人的事业需要每个人的参与，我们为大家提供开放的自由话题讨论机会，有话题分享或发起讨论意愿的朋友可以在活动开始之前将PPT或者话题、讨论内容提交通过邮件发给（zhanghao@mail.taiji.com.cn）</p>
+
+<h2>本次活动已经提交的话题</h2>
+
+<ul>
+<li>JS重构（二）  主讲人：边迪</li>
+<li>一个Geek是怎么写博客的  主讲人：张昊</li>
+<li>气象存储解决方案  主讲人：李毅</li>
+</ul>
+
 ]]></content>
   </entry>
   
