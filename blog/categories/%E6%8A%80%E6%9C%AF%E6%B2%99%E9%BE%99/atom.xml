@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术沙龙 | Fantasy Blog]]></title>
   <link href="http://tjfantasy.github.com/blog/categories/%E6%8A%80%E6%9C%AF%E6%B2%99%E9%BE%99/atom.xml" rel="self"/>
   <link href="http://tjfantasy.github.com/"/>
-  <updated>2012-07-24T09:26:53+08:00</updated>
+  <updated>2012-07-26T09:57:08+08:00</updated>
   <id>http://tjfantasy.github.com/</id>
   <author>
     <name><![CDATA[fantasy]]></name>
@@ -38,7 +38,7 @@
 
 <h2>活动地点</h2>
 
-<p>方兴大厦9层会议室</p>
+<p>一楼培训教室</p>
 
 <h2>活动费用</h2>
 
@@ -51,11 +51,25 @@
 <h2>本次活动已经提交的话题</h2>
 
 <ul>
-<li>JS重构（二）  主讲人：边迪</li>
 <li>一个Geek是怎么写博客的  主讲人：张昊</li>
+</ul>
+
+
+<p>如果你没有写过BLOG，说明你不是一个技术爱好者；你还在CSDN，JavaEye等网站上写BLOG，说明你不是一个Geek，那么Geek是怎么写BLOG的呢？将给大家展示如果用github和Octopress,搭建一个BLOG，并且写BLOG的</p>
+
+<ul>
+<li>JS重构（二）  主讲人：边迪</li>
+</ul>
+
+
+<p>  上次JS重构只是一个引子，而这次绝对是精华中的精华，边迪带来JS重构的第二讲。</p>
+
+<ul>
 <li>气象存储解决方案  主讲人：李毅</li>
 </ul>
 
+
+<p>   大家都知道气象的数据量都是上T级别的，所以对于存储的要求很高，所以李毅带来了现在气象项目存储的解决方案与大家分享</p>
 ]]></content>
   </entry>
   
