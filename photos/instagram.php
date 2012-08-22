@@ -218,7 +218,7 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2012/07/24/salon-july/">技术沙龙7月－“盛夏荷风“(未开始)</a>
+        <a href="/blog/2012/07/24/salon-july/">技术沙龙7月－“盛夏荷风“(已结束)</a>
       </li>
     
       <li class="post">
